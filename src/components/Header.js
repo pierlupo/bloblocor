@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import Context from '../Context';
 // import react router
 import { useNavigate } from 'react-router-dom';
+// import Home from './components/Home';
 // import logo white
 // import logoWhite from '../logo_white.png';
 
@@ -25,7 +26,9 @@ function Header() {
       navigate('/login');
     }
   }
-
+const home = () => {
+  navigate('/')
+}
   const seeProfile = () => {
     const isSeeProfile = window.confirm('Do you want to see your profile ?');
     if (isSeeProfile) {
@@ -42,12 +45,12 @@ function Header() {
     <div className="header">
       <div className="header__left">
         {/* <img src={logoWhite} alt="Uber Clone" /> */}
-        <div id="title">Bloblocor</div>
+        <div className="title"  onClick={home}>Bloblocor</div>
         {
            user && (
             <div className="header__right" onClick={seeProfile}>
               <img src={user.avatar} alt={user.email} />
-              <span>Hello, {user.email}</span>
+              <span className ="hello" >Hello {user.email}</span>
             </div>
           )
         }

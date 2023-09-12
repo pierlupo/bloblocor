@@ -28,7 +28,7 @@ input {
 }
 
 .login__container {
-  background-color: #f0f2f5;
+  background-color: #f0f2f5c7;
   display: grid;
   grid-template-columns: 55% 45%;
   height: 100vh;
@@ -360,6 +360,10 @@ input {
   padding-right: 0.75rem;
 }
 
+.header__right:hover {
+opacity:0.8;
+}
+
 .header__right:hover{
   cursor: pointer;
 }
@@ -372,9 +376,9 @@ input {
   padding-right: 0.75rem;
 }
 
-.header__right img {
+/* .header__right img {
   width: 1.5rem;
-}
+} */
 
 .header__logout span:hover {
   cursor: pointer;
@@ -618,27 +622,58 @@ input {
   backdrop-filter: blur(10px);
 }
 
-.user-profile__info__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 
 .user-profile__info__title {
   font-size: 1.25rem;
   font-weight: 600;
   padding: 1.25rem 0 0.5rem 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding:0.5rem;
+  border-bottom: 1px solid #ccc;
+  letter-spacing: 0.5rem;
+}
+
+.user_profile_Info {
+  font-size:20px;
+  padding: 0.5rem;
+  margin-bottom:1rem;
 }
 
 .user-profile__info__btn {
   background-color:#000000;
   border: 0;
-  color: #fff;
+  color: #f3dd17e7;
   font-size: 1rem;
   font-weight: 600;
   margin: 1.25rem auto;
   outline: none;
   padding: 0.875rem 1rem;
   border-radius: 2rem;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  width: inherit;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.user-profile__info__form {
+
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.img__profile {
+  width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .user-profile__btn:hover {
@@ -658,11 +693,6 @@ input {
   margin:10%;
   background-color: rgba(255,255,255,0.13);
   backdrop-filter: blur(10px);
-}
-
-.user-profile__ride__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .user-profile__ride__title {
@@ -693,10 +723,6 @@ input {
   backdrop-filter: blur(10px);
 }
 
-.user-profile__stat__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 
 .user-profile__stat__title {
   font-size: 1.25rem;
@@ -867,11 +893,16 @@ input {
   font-weight: 600;
 }
 
-#title{
+.title{
   color:rgba(255, 255, 255, 0.829);
   font-size: 25px;
   letter-spacing: 0.5rem;
   font-weight: lighter;
+  cursor:pointer;
+  }
+
+  .title:hover { 
+    opacity: 0.8;
   }
 
 #btnlogout{
@@ -880,3 +911,11 @@ input {
   font-weight: lighter;
 }
 
+.hello{
+  color:rgba(255, 255, 255, 0.829);
+  font-weight: lighter;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  font-size: 18px;
+}

@@ -45,17 +45,15 @@ return (
             Profile
             </div>
         </div>
+        
         <div className="user-profile__info__subtitle"></div>
         <div className="user-profile__info__form">
        
-              <img src={user.avatar} alt={user.email}/>
-              <span>{user.email}</span>
-              <span>{user.phone}</span>
-              <span>{user.role}</span>
+              <img className="img__profile" src={user.avatar} alt={user.email}/>
+              <span className ="user_profile_Info">Email: {user.email}</span>
+              <span className ="user_profile_Info">Phone: {user.phone}</span>
+              <span className ="user_profile_Info">Role: {user.role}</span>
             </div>
-          <button className="user-profile__info__btn user-profile__change-btn" onClick={() => toggleModal(false)}>
-            
-          </button>
           <button className="user-profile__info__btn">
           Edit 
           </button>
@@ -63,7 +61,7 @@ return (
 
         <div className="user-profile__ride__content">
         <div className="user-profile__ride__container">
-          <div className="user-profile__ride__title">
+          <div className="user-profile__info__title">
             Rides
             </div>
         </div>
@@ -79,7 +77,7 @@ return (
 
         <div className="user-profile__stat__content">
         <div className="user-profile__stat__container">
-          <div className="user-profile__stat__title">
+          <div className="user-profile__info__title">
             Stats
             </div>
         </div>
