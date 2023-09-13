@@ -26,20 +26,22 @@ function Header() {
       navigate('/login');
     }
   }
-const home = () => {
-  navigate('/')
-}
-  const seeProfile = () => {
-    const isSeeProfile = window.confirm('Do you want to see your profile ?');
-    if (isSeeProfile) {
-      localStorage.setItem("auth", JSON.stringify(user));
-      setUser(user);
-      // redirect to profile page.
-      navigate('/profile');
-    }
+
+  const home = () => {
+    navigate('/')
   }
 
-  console.log(user);
+  const seeProfile = () => {
+      const isSeeProfile = window.confirm('Do you want to see your profile ?');
+      if (isSeeProfile) {
+        localStorage.setItem("auth", JSON.stringify(user));
+        setUser(user);
+        // redirect to profile page.
+        navigate('/profile');
+      }
+    }
+
+  // console.log(user);
 
   return (
     <div className="header">

@@ -26,15 +26,22 @@ firebase.initializeApp(FirebaseConfig);
 
 function UserProfile(props) {
     const { toggleModal } = props;
-    const { user, setUser } = useContext(Context);
+    const { user, setUser, rides, setRides } = useContext(Context);
     
-
-    const userProfile = () => {
-        if(user) {
-
-        }
-        console.log(user);
-}
+    //  const userRides = () => {
+        
+          const userEmail = user.email;
+          firebase.database().ref().child('rides').orderByChild('driver/email').equalTo(userEmail).on("value", function(snapshot) {
+            const val = snapshot.val();
+            if (val) {
+              const keys = Object.keys(val);
+              const rides = val[keys[0]];
+              setRides(rides); 
+        }  
+       console.log(1);
+      })  
+    
+  //  }  
 return (
     <>
     <Header />
@@ -66,13 +73,12 @@ return (
             </div>
         </div>
         <div className="user-profile__ride__subtitle"></div>
-        {/* <div className="user-profile__ride__form">
+
        
-              <img src={user.avatar} alt={user.email}/>
-              <span>{user.email}</span>
-              <span>{user.phone}</span>
-              <span>{user.role}</span>
-            </div> */}
+              {/* <span className ="user_profile_Info">Destination: {rides.destination}</span>
+              <span className ="user_profile_Info">Pick up: {rides.pickup}</span> */}
+              {/* <span className ="user_profile_Info">Requestor: {rides.requestor}</span>
+              <span className ="user_profile_Info">Requestor: {rides.status}</span> */}
         </div>
 
         <div className="user-profile__stat__content">

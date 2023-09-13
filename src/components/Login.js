@@ -7,7 +7,6 @@ import Context from "../Context";
 import { app, db, auth, realTimeDb } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { ref } from "firebase/database"
-import firebase from 'firebase/compat/app'
 // import validator to validate user's credentials.
 import validator from "validator";
 // import custom components.
@@ -18,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 // import logo 
 //import logoBlack from '../logo_black.png';
 import bloblocor from '../bloblocor.png';
+import firebase from 'firebase/compat/app'
 import 'firebase/compat/database';
 
 let FirebaseConfig = {

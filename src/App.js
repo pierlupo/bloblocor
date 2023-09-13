@@ -51,6 +51,11 @@ function App() {
   const [rideRequest, setRideRequest] = useState(null);
   // current ride.
   const [currentRide, setCurrentRide] = useState(null);
+  // rides.
+  const [rides, setRides] = useState(null);
+  
+
+
 
   const lookingDriverMaxTime = 30000;
 
@@ -58,6 +63,7 @@ function App() {
     initAuthUser();
     initCometChat();
     initCurrentRide();
+    
   }, []);
 
   useEffect(() => {
@@ -153,7 +159,7 @@ function App() {
   }
 
   return (
-    <Context.Provider value={{isLoading, setIsLoading, user, setUser, cometChat, selectedFrom, setSelectedFrom, selectedTo, setSelectedTo, rideRequest, setRideRequest, currentRide, setCurrentRide}}>
+    <Context.Provider value={{isLoading, setIsLoading, user, setUser, cometChat, selectedFrom, setSelectedFrom, selectedTo, setSelectedTo, rideRequest, setRideRequest, currentRide, setCurrentRide, rides, setRides}}>
       <Router>
         <Routes >
           {/* Home Route */}
